@@ -5,6 +5,7 @@ import {
   getCurrentTurnElement,
   getGameStatusElement,
 } from "./selectors.js";
+import { checkGameStatus } from "./utils.js";
 
 /**
  * Global variables
@@ -62,4 +63,7 @@ function initCellElementList() {
 (() => {
   // bind click event for all li elements
   initCellElementList();
+
+  console.log(checkGameStatus(["X", "O", "X", "O", "O", "O", "X", "X", ""]));
+  console.log(checkGameStatus(["X", "O", "X", "O", "X", "O", "X", "O", ""]));
 })();
